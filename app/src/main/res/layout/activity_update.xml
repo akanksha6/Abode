@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_back"
+    tools:context=".UpdateActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/setting_image"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/default_profile"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="61dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/uName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/uAddress"
+        android:layout_marginTop="133dp"
+        android:textColor="@color/white"
+        android:textColorHint="#ffffff"
+        android:layout_alignLeft="@+id/uAddress">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="297dp"
+            android:hint="Put your new Name here..!!"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/uAddress"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/uMobile_no"
+        android:layout_marginTop="207dp"
+        android:textColor="@color/white"
+        android:textColorHint="#ffffff"
+        android:layout_alignLeft="@+id/uMobile_no">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/add"
+            android:layout_width="297dp"
+            android:layout_height="wrap_content"
+            android:hint="Put your new Address here..!!"
+            android:textColor="@color/white"
+            android:textColorHint="#ffffff" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/uMobile_no"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/uRent"
+        android:layout_marginBottom="230dp"
+        android:textColor="@color/white"
+        android:textColorHint="#ffffff">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/cell"
+            android:layout_width="297dp"
+            android:layout_height="wrap_content"
+            android:hint="Put your new Mobile Number here..!!"
+            android:textColor="@color/white" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/uRent"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/uType"
+        android:layout_marginBottom="152dp"
+        android:textColor="@color/white"
+        android:textColorHint="#ffffff"
+        android:layout_alignLeft="@+id/uType">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/rent"
+            android:layout_width="297dp"
+            android:layout_height="wrap_content"
+            android:hint="Put your new Rent here..!!"
+            android:textColor="@color/white" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/uType"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="82dp"
+        android:textColor="@color/white"
+        android:textColorHint="#ffffff">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/type"
+            android:layout_width="297dp"
+            android:layout_height="wrap_content"
+            android:hint="Put your new Type here..!!"
+            android:textColor="@color/white" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/uUpdate"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/button_back"
+        android:text="@string/make_changes" />
+
+
+
+
+</RelativeLayout>

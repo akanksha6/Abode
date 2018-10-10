@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="@drawable/navback"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".NavActivity"
+    tools:showIn="@layout/app_bar_nav">
+    <LinearLayout
+        android:id="@+id/Parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="515dp">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/want"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Verification Assistance"
+                android:textColor="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/SearchLand"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_above="@+id/textView12"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="-170dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/circlell" />
+
+
+            <ImageButton
+                android:id="@+id/SearchTenants"
+                android:layout_width="167dp"
+                android:layout_height="160dp"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SearchLand"
+                app:srcCompat="@drawable/circlett" />
+
+            <ImageButton
+                android:id="@+id/want"
+                android:layout_width="137dp"
+                android:layout_height="136dp"
+                android:layout_below="@+id/SearchTenants"
+                android:layout_centerHorizontal="true"
+                android:background="@null"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ass" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="156dp"
+                android:gravity="center"
+                android:text="LandLords"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="189dp"
+                android:gravity="center"
+                android:text="Tenants"
+                android:textColor="@android:color/white" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/abc"
+            android:background="@drawable/button_back"
+            android:alpha="0.7"
+            android:layout_width="246dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Why Verify"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/xyz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="4dp"
+            android:text="@string/need"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:textColor="@color/white"/>
+
+
+
+
+        <TextView
+            android:id="@+id/abc1"
+            android:background="@drawable/button_back"
+            android:alpha="0.7"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Process For Tenants Verification"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/xyz1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="4dp"
+            android:text="@string/Process"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:textColor="@color/white"/>
+
+        <WebView
+            android:id="@+id/web1"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="4dp"
+            android:visibility="gone"></WebView>
+
+        <TextView
+            android:id="@+id/acb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button_back"
+            android:alpha="0.7"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Process for applying for Assistant"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/xyz11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="4dp"
+            android:text="@string/manual_process"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/About_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="About Us"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#000"
+            android:text="@string/about"
+            android:textColor="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="101dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#000">
+
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="72dp"
+                android:layout_height="61dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="19dp"
+                android:src="@drawable/gmail_icon" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="45dp"
+                android:layout_height="43dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="77dp"
+                android:layout_marginTop="29dp"
+                android:src="@drawable/twitter_icon"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="77dp" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="45dp"
+                android:layout_height="43dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="72dp"
+                android:layout_marginTop="29dp"
+                android:src="@drawable/facebook_icon"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="72dp" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>

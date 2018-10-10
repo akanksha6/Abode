@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1039570997346",
+    "firebase_url": "https://abode-81b5b.firebaseio.com",
+    "project_id": "abode-81b5b",
+    "storage_bucket": "abode-81b5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039570997346:android:b4ed070adfacd831",
+        "android_client_info": {
+          "package_name": "com.example.srushti.abode"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1039570997346-udv13bpg0iokpo0j57ockih51phicj9v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.srushti.abode",
+            "certificate_hash": "d523c9ef3401af4587d17bd0492dfeb812845f72"
+          }
+        },
+        {
+          "client_id": "1039570997346-euf7vim181l7njivtuu9hvs174b5jhlq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdmJKvN6hTyap6XQueiCJVG8lHaz8m328"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1039570997346-euf7vim181l7njivtuu9hvs174b5jhlq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
