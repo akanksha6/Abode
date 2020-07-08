@@ -36,6 +36,7 @@ public class LandlordsProfile extends AppCompatActivity {
     DatabaseReference mDatabase,cDatabase;
     int i=0;
     users ll;
+   String stuff,type;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,8 +49,8 @@ public class LandlordsProfile extends AppCompatActivity {
         chat=findViewById(R.id.chat);
         Bundle bundle = getIntent().getExtras();
         assert bundle != null;
-        final String stuff = bundle.getString("UserInfo");
-        final String type = bundle.getString("Type");
+        stuff= bundle.getString("UserInfo");
+        type = bundle.getString("Type");
         fav=FirebaseDatabase.getInstance().getReference().child("Home").child("Favourites");
         cuser= FirebaseAuth.getInstance().getCurrentUser();
 
@@ -99,23 +100,7 @@ public class LandlordsProfile extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
             }
         });
-        imageView3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                imageView3.setVisibility(View.GONE);
-                mfire.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        String name1="/"+dataSnapshot.child("name").getValue(String.class);
-                        fav.child(cuser.getUid()).child(stuff).setValue(type+name1);
-                        Toast.makeText(LandlordsProfile.this,"Added to Favourites Successfully",Toast.LENGTH_LONG).show();
-                    }
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                    }
-                });
-            }
-        });
+
         but_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -158,6 +143,28 @@ public class LandlordsProfile extends AppCompatActivity {
                         intent.putExtra("uid",stuff);
                         intent.putExtra("cuid",cuser.getUid());
                         startActivity(intent);
+                    }
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                    }
+                });
+            }
+        });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        imageView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageView3.setVisibility(View.GONE);
+                mfire.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        String name1="/"+dataSnapshot.child("name").getValue(String.class);
+                        fav.child(cuser.getUid()).child(stuff).setValue(type+name1);
+                        Toast.makeText(LandlordsProfile.this,"Added to Favourites Successfully",Toast.LENGTH_LONG).show();
                     }
                     @Override
                     public void onCancelled(DatabaseError databaseError) {

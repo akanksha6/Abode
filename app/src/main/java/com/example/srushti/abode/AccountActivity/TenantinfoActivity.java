@@ -46,8 +46,6 @@ public class TenantinfoActivity extends AppCompatActivity {
         City=findViewById(R.id.ecity);
         submitb=(Button)findViewById(R.id.buttonsubmit);
 
-
-
         submitb.setOnClickListener(new View.OnClickListener()
         {
             @Override

@@ -38,11 +38,6 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-
-
-
-
-
         auth= FirebaseAuth.getInstance();
         final String selfemail=auth.getCurrentUser().getEmail().toString();
         final String chatwith=getIntent().getExtras().getString("name");
@@ -98,7 +93,6 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
-
                // Toast.makeText(ChatActivity.this,"ref",Toast.LENGTH_SHORT).show();
                 String message1="";
                 String userName="";
@@ -111,21 +105,17 @@ public class ChatActivity extends AppCompatActivity {
                     message1 = map.get("Message");
                     userName = map.get("User");
 
-
                 }
                 if(selfemail.equals(userName))
                 {
 
                     addMessageBox( message1, 1);
-
                 }
                 else
                 {
                     addMessageBox( message1, 2);
 
                 }
-
-
             }
 
             @Override
@@ -150,33 +140,25 @@ public class ChatActivity extends AppCompatActivity {
         });
         DatabaseReference ref4=FirebaseDatabase.getInstance().getReference("Recent_chat");
         ref4.child(Land).setValue(chatwith);
-
     }
-
 
     public void addMessageBox(String message, int type){
         TextView textView=new TextView(ChatActivity.this);
         textView.setText(message);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
-
         if(type == 1) {
             lp.setMargins(100, 0, 0, 10);
             textView.setLayoutParams(lp);
             textView.setBackgroundResource(R.drawable.rounded_corner1);
             layout.addView(textView);
-
         }
         else{
             textView.setBackgroundResource(R.drawable.rounded_corner2);
             lp.setMargins(0, 0,100, 10);
             textView.setLayoutParams(lp);
             layout.addView(textView);
-
         }
-
         scrollView.fullScroll(View.FOCUS_DOWN);
     }
-
-
 }

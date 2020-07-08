@@ -19,13 +19,10 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class ResetActivity extends AppCompatActivity {
 
-
     private EditText inputEmail;
     private Button btnReset, btnBack;
     private FirebaseAuth auth;
     private ProgressBar progressBar;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
